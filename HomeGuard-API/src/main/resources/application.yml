@@ -1,0 +1,23 @@
+spring:
+  main:
+    allow-circular-references: true
+  sql:
+    init:
+      mode: always
+  application:
+    name: HomeGuard-API
+  datasource:
+    url: jdbc:postgresql://localhost:5532/homeguardb
+    username: dog
+    password: mypassword
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        globally_quoted_identifiers: true
+    show-sql: true
+
+jwt:
+  secret: 6a1e1f68813b68c411e04a22145d52a7af5f6e7b658b6d1bb5d704f4f2a1e618
+  expiration: 1296000000
